@@ -11,6 +11,67 @@
         "Tunis",
         "Sousse"
       ]
+    },
+    {
+      "id": 1,
+      "name": "Echec",
+      "price": 46.3,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": true,
+      "shops": []
+    },
+    {
+      "id": 1,
+      "name": "test",
+      "price": 12,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": true,
+      "shops": []
+    },
+    {
+      "id": 3,
+      "name": "lol",
+      "price": 99.99,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": true,
+      "shops": []
+    },
+    {
+      "id": 5,
+      "name": "zylox",
+      "price": 123,
+      "madeIn": "Tunisie",
+      "category": "Sport",
+      "isNew": true,
+      "shops": []
+    },
+    {
+      "id": 6,
+      "name": "wdfsfqsdfs",
+      "price": 33,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": true,
+      "shops": []
+    },
+    {
+      "id": 1,
+      "name": "test2",
+      "price": 46.3,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": true
+    },
+    {
+      "id": 1,
+      "name": "cristiano",
+      "price": 46.3,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": true
     }
   ]
 }

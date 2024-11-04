@@ -1,44 +1,55 @@
 <div class="container">
-    <h3>Ajout d'un jeu</h3>
-    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
-        <div>
-            <label> Identifiant du jeu </label>
-            <input type="number" name="id" readonly formControlName="id">
-        </div>
-        <div>
-            <label>Nom</label>
-            <input type="text"  name="name" formControlName="name">
-        </div>
-        <div>
-            <label>Prix</label>
-            <input type="number" name="price" formControlName="price">
-        </div>
+  <h3>Ajout d'un jeu</h3>
+  <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label> Identifiant du jeu </label>
+      <input class="form-control" type="number" name="id" readonly formControlName="id" />
+    </div>
+    <div>
+      <label>Nom</label>
+      <input class="form-control" type="text" name="name" formControlName="name" />
+    </div>
+    <div>
+      <label>Prix</label>
+      <input class="form-control" type="number" name="price" formControlName="price" />
+    </div>
 
-        <div>
-            <label> Made In </label>
-            <label>
-                <input type="radio" name="madeIn" value="Tunisie" >Tunisie
-            </label>
-            <label>
-                <input type="radio" name="madeIn" value="Autre" >Autre
-            </label>
-        </div>
-        <div>
-            <label>Catégorie</label>
-            <select name="selCategories">
-                @for (c of categories; track $index) {
-                    <option [value]="c">{{c}}</option>
-                }
-            </select>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" name="isNew" > Nouveau
-            </label>
-        </div>
+    <div>
+      <label> Made In </label>
+      <label>
+        <input
+          type="radio"
+          name="madeIn"
+          value="Tunisie"
+          formControlName="madeIn"
+        />Tunisie
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="madeIn"
+          value="Autre"
+          formControlName="madeIn"
+        />Autre
+      </label>
+    </div>
+    <div>
+      <label>Catégorie</label>
+      <select name="selCategories" formControlName="category" class="form-select">
+        @for (c of categories; track $index) {
+        <option [value]="c">{{ c }}</option>
+        }
+      </select>
+    </div>
+    <div>
+      <label> <input class="form-control" type="checkbox" name="isNew"  formControlName="isNew"/> Nouveau </label>
+    </div>
 
-        <input type="submit"  value="Ajouter">
-        <input type="button" value="Effacer">
-
-    </form>
+    <input type="submit" value="Ajouter" class="btn btn-primary pr-2" />
+    <input type="button" value="Effacer" class="btn btn-primary" (click)="onResetForm()"/>
+  </form>
 </div>
+
+@for (g of Games; track $index) {
+    <h1>{{g.name}}</h1>
+}
