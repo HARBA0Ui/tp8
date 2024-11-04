@@ -1,0 +1,36 @@
+<h2> Ajout d'un employé</h2>
+<form>
+    <div>
+        <label> Donnez le matricule</label>
+        <input type="text" >
+    </div>
+
+    <div>
+        <label> Donnez le nom</label>
+        <input type="text" >
+    </div>
+
+    <div class="p-2 bg-light rounded">
+        <strong>Affiliation</strong>
+        <div>
+            <div>
+                <label> Choisissez le département</label>
+                <input type="radio" value="TI" > IT
+                <input type="radio" value="Finance" > Finance
+            </div>
+            <div>
+                <label> Donnez la fonction</label>
+                <select>
+     
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class ="btn btn-dark btn-sm">Ajouter Diplôme</button>
+    <br>
+    <button class="btn btn-primary">Ajouter Employé</button>
+    <button class="btn btn-secondary" type="button" >Vider</button> 
+</form>
+
+<app-employe-list></app-employe-list>

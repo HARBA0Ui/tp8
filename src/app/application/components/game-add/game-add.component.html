@@ -1,0 +1,44 @@
+<div class="container">
+    <h3>Ajout d'un jeu</h3>
+    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label> Identifiant du jeu </label>
+            <input type="number" name="id" readonly formControlName="id">
+        </div>
+        <div>
+            <label>Nom</label>
+            <input type="text"  name="name" formControlName="name">
+        </div>
+        <div>
+            <label>Prix</label>
+            <input type="number" name="price" formControlName="price">
+        </div>
+
+        <div>
+            <label> Made In </label>
+            <label>
+                <input type="radio" name="madeIn" value="Tunisie" >Tunisie
+            </label>
+            <label>
+                <input type="radio" name="madeIn" value="Autre" >Autre
+            </label>
+        </div>
+        <div>
+            <label>Catégorie</label>
+            <select name="selCategories">
+                @for (c of categories; track $index) {
+                    <option [value]="c">{{c}}</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="isNew" > Nouveau
+            </label>
+        </div>
+
+        <input type="submit"  value="Ajouter">
+        <input type="button" value="Effacer">
+
+    </form>
+</div>
